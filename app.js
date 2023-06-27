@@ -42,7 +42,29 @@ app.post('/recuperar-senha', (req, res) => {
     res.redirect('/')
 });
 
+app.get('/index', (req, res) => {
+    res.render("index")
+});
 
+app.get('/mostrar-times', (req, res) => {
+
+    const times = {
+        time : {
+            'nome' : 'fodinha' 
+        },
+        time : {
+            'nome': 'fodinha2' 
+        },
+        time : {
+            'nome': 'fodinha3' 
+        }
+    }
+    res.render("show-teams", {times: times})
+});
+
+app.get('/criar-time', (req, res) => {
+    res.render("create-teams")
+});
 app.listen(3000, () => {    
   console.log('Server rodando na porta 3000 pae');
 });
