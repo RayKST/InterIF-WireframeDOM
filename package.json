@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "name": "interif-wireframedom",
+  "version": "1.0.0",
+  "description": "Wireframe",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RayKST/InterIF-WireframeDOM.git"
+  },
+  "author": "RayKST",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RayKST/InterIF-WireframeDOM/issues"
+  },
+  "homepage": "https://github.com/RayKST/InterIF-WireframeDOM#readme"
+}
