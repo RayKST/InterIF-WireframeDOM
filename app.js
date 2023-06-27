@@ -71,6 +71,9 @@ app.post('/criar-time', (req, res) => {
     res.redirect('index')
 });
 
+app.get('/perfil', (req, res) => {
+    res.render("profile-page")
+});
 
 app.listen(3000, () => {    
   console.log('Server rodando na porta 3000 pae');
