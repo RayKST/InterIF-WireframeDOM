@@ -22,7 +22,7 @@ app.get('/login', (req, res) => {
 app.post('/login', (req, res) =>{
     //localStorage.setItem('key', JSON.stringify(req))
     //localStorage.setItem('key2', JSON.stringify(res))
-    res.redirect('/')
+    res.redirect('/index')
 })
 
 app.get('/criar-usuario', (req, res) => {
@@ -47,24 +47,31 @@ app.get('/index', (req, res) => {
 });
 
 app.get('/mostrar-times', (req, res) => {
-
-    const times = {
-        time : {
-            'nome' : 'fodinha' 
-        },
-        time : {
-            'nome': 'fodinha2' 
-        },
-        time : {
-            'nome': 'fodinha3' 
-        }
-    }
-    res.render("show-teams", {times: times})
+    //const times = localStorage.getItem('times')
+    // const times = {
+    //     time : {
+    //         'nome' : 'fodinha' 
+    //     },
+    //     time : {
+    //         'nome': 'fodinha2' 
+    //     },
+    //     time : {
+    //         'nome': 'fodinha3' 
+    //     }
+    // }
+    res.render("show-teams")//, {times: JSON.parse(times)})
 });
 
 app.get('/criar-time', (req, res) => {
+
     res.render("create-teams")
 });
+
+app.post('/criar-time', (req, res) => {
+    res.redirect('index')
+});
+
+
 app.listen(3000, () => {    
   console.log('Server rodando na porta 3000 pae');
 });
