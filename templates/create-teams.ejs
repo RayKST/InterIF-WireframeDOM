@@ -8,6 +8,7 @@
     <title>Criar Time</title>
   </head>
   <body>
+    <%- include('partials/sidebar') %>
     <div class="container">
       <h1>Criar Time</h1>
       <form action="" method="POST">
@@ -15,6 +16,7 @@
         <input type="text" id="teamname" name="teamname" required>
         <label for="members">Participantes:</label>
         <input type="number" id="members" name="members" required>
+        <br>
         <label for="games">Jogos de Interesse:</label>
         <input type="text" id="games" name="games" required>
         <input type="submit" value="Criar time">
